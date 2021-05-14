@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		img {
+			max-width: 100%;
+		}
+	</style>
+	<title>
+		
+	</title>
+	<script type="text/javascript">
+		const cdnRootStr = "https://f001.backblazeb2.com/file/awanatu/";
+		document.addEventListener("DOMContentLoaded", (eReady) => {
+			document.querySelectorAll("img[id]").forEach((imgEl) => {
+				imgEl.setAttribute("src", cdnRootStr + imgEl.getAttribute('id'));
+			})
+		})
+
+	</script>
+</head>
+<body>
+	<img id="DSC08829.jpg">
+	<img id="DSC08871.jpg">
+	<img id="DSC08878.jpg">
+	<img id="DSC08909.jpg">
+</body>
+</html>
