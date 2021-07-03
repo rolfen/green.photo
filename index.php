@@ -29,12 +29,12 @@ function get_dir_files($dir, $glob = '*') {
 	</head>
 	<body>
 		<div id="photos">
-			<a id="photoEl" href="photo/DSC08960.jpg">
-				<img src="photo/DSC08960.jpg">
+			<a id="photoEl" href="photo_resized/DSC08960.jpg">
+				<img src="photo_resized/DSC08960.jpg">
 			</a>
 			<h2>Buildings</h2>
 <?php
-				foreach(get_dir_files('photo/buildings', '*.jpg') as $fileName) {
+				foreach(get_dir_files('photo_resized/buildings', '*.jpg') as $fileName) {
 					echo "\t\t\t".'<img src="'.$fileName.'">'."\n";
 				}
 ?>
