@@ -2,13 +2,16 @@
 IN_DIR='photo'
 OUT_DIR='photo_resized'
 TMP_DIR='tmp_resized'
+QUALITY=60
+WIDTH=2000
+HEIGHT=1280
 
 # recreate directory structure in temp dir
 mkdir -p $TMP_DIR
 find $IN_DIR -type d -exec mkdir $TMP_DIR/{} \;
 
 # convert into temp dir
-find $IN_DIR -iname '*.jpg' -exec convert {} -resize 1024x800 $TMP_DIR/{} \;
+find $IN_DIR -iname '*.jpg' -exec convert {} -quality $QUALITY -resize $WIDTHx$HEIGHT $TMP_DIR/{} \;
 
 #copy to final dir
 mkdir $OUT_DIR
