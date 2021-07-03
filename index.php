@@ -35,7 +35,7 @@ function get_dir_files($dir, $glob = '*') {
 			<h2>Buildings</h2>
 <?php
 				foreach(get_dir_files('photo_resized/buildings', '*.jpg') as $fileName) {
-					echo "\t\t\t".'<img src="'.$fileName.'">'."\n";
+					echo "\t\t\t<a href=\"$fileName\"><img src=\"$fileName\"></a>\n";
 				}
 ?>
 		</div>
