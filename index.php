@@ -7,13 +7,17 @@ function get_dir_files($dir, $glob = '*') {
 	}
 	return($files);
 }
+
+function imageMarkup($fileName) {
+	return ("\t\t\t<a href=\"$fileName\"><img src=\"$fileName\"></a>\n");
+}
 ?>
 <html>
 	<head>
 		<title></title>
 		<script type="text/javascript">
 			document.addEventListener("DOMContentLoaded", (e) => {
-			});
+			}); 
 		</script>
 		<style>
 			#photos {
@@ -29,14 +33,12 @@ function get_dir_files($dir, $glob = '*') {
 	</head>
 	<body>
 		<div id="photos">
-			<a id="photoEl" href="photo_resized/DSC08960.jpg">
-				<img src="photo_resized/DSC08960.jpg">
-			</a>
+
 			<h2>Buildings</h2>
 <?php
-				foreach(get_dir_files('photo_resized/buildings', '*.jpg') as $fileName) {
-					echo "\t\t\t<a href=\"$fileName\"><img src=\"$fileName\"></a>\n";
-				}
+				foreach(get_dir_files('resized/photo/buildings', '*.jpg') as $fileName) {
+						echo imageMarkup($fileName);
+					}
 ?>
 		</div>
 	</body>
